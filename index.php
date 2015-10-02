@@ -102,7 +102,7 @@ $app->delete('/categorias/:id', function($id) {
 
     // verifica se houve problema na exclusão
     if ($isDeleted) {
-        echo "{'message':'Categoria excluído'}";
+        echo "{'message':'Categoria excluída'}";
     } else {
         echo "{'message':'Erro ao excluir categoria'}";
     }
@@ -114,7 +114,7 @@ $app->get('/tarefas/:id', function ($id) {
     //recupera o cliente
     $tarefa = TarefaDAO::getTarefaByID($id);
     
-    echo json_encode($categoria);
+    echo json_encode($tarefa);
 });
 
 $app->get('/tarefas', function() {
@@ -151,7 +151,7 @@ $app->delete('/tarefas/:id', function($id) {
 
     // verifica se houve problema na exclusão
     if ($isDeleted) {
-        echo "{'message':'Tarefa excluído'}";
+        echo "{'message':'Tarefa excluída'}";
     } else {
         echo "{'message':'Erro ao excluir tarefa'}";
     }
